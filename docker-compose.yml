@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  dev-postgres:
+    image: postgres:latest
+    container_name: dev-snoc-postgres
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+    environment:
+      - POSTGRES_USER=snoc-dev
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - /opt/docker_binds/dev-snoc-postgres:/var/lib/postgresql/data
+    ports:
+      - "5433:5432"
