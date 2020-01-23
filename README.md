@@ -1,6 +1,6 @@
 # Simple NOC
 
-This projects aims to be Simple Network Operation Center for networks with large amount of network devices. Inspired by NOC Project, which, I think, is a great tool, but in my opinion is very bloated.
+This projects aims to be Simple Network Operations Center for networks with large amount of network devices. Inspired by [NOC Project](https://code.getnoc.com/noc/noc).
 
 ## Roadmap
 
