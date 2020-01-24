@@ -1,0 +1,19 @@
+<table id="id_valid_subnets" class="table">
+    <h3>Valid Subnets</h3>
+    {% for subnet in valid_subnets %}
+        <tr><td>{{ forloop.counter }}: {{ subnet }}</td></tr>
+    {% endfor %}
+</table>
+
+<table id="id_invalid_subnets" class="table">
+    <h3>Invalid Subnets</h3>
+    {% for subnet in invalid_subnets %}
+        <tr><td>{{ forloop.counter }}: {{ subnet }}</td></tr>
+    {% endfor %}
+</table>
+
+<form action="{% url 'add-subnets-summary'%}" method="post">
+{% csrf_token %}
+<input type="submit" name="add_subnets" value="Add" />
+<input type="submit" name="cancel" value="Cancel" />
+</form>
